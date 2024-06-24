@@ -14,7 +14,7 @@ install-golangci-lint:
 lint:
 	GOBIN=$(LOCAL_BIN) golangci-lint run ./... --config .golangci.pipeline.yaml
 
-generate-user-api:
+generate-chat-api:
 	mkdir -p pkg/chat_api_v1
 	protoc --proto_path api/chat_api_v1 \
 	--go_out=pkg/chat_api_v1 --go_opt=paths=source_relative \
